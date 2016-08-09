@@ -1,0 +1,10 @@
+Package: surviplot
+Version: 1.0.0
+Date: 2016-08-08
+Title: Draw Survival Curves with Number-at-Risk
+Depends: survival
+Author: Aron Eklund
+Maintainer: Aron Eklund <eklund@cbs.dtu.dk>
+Description: The primary function "surviplot" draws a survival curve with the number at risk displayed underneath. Optionally, the hazard ratio, CI, and logrank P value are displayed if there are exactly two strata. 
+License: Artistic-2.0
+URL: http://www.cbs.dtu.dk/~eklund/surviplot/

@@ -1,0 +1,57 @@
+surviplot NEWS
+
+
+Changes in version 1.0.0 (2016-08-08)
+
+- This package was formerly called "survplot" (until version 0.0.7) and is now called "surviplot". This was done to avoid confusion with the function "survplot" in the "rms" package.
+- Similarly, the function "survplot" is now called "surviplot".
+
+
+Changes in version 0.0.7 (2012-04-04)
+
+- Unstratified data should now work; see new examples in documentation.
+- "cutn" now accepts NAs without complaining, and now does not have an "na.rm" argument.
+- New function "addNrisk" for adding number-at-risk to an existing plot.
+
+
+Changes in version 0.0.6 (2012-02-20)
+
+- Added a NAMESPACE file.
+
+
+Changes in version 0.0.5 (2011-07-06)
+
+- In "survplot", supplying a list to legend.pos would generate a warning.
+- "survplot" now returns HR and P value (as text), invisibly (if there are two groups).
+
+
+Changes in version 0.0.4 (2010-10-20)
+
+- Updated keywords in function docs
+- Modernized this NEWS file (was ChangeLog)
+- Changed arg in "survplot": "show.n.risk" is now "show.nrisk".
+- Added "color.nrisk" arg in "survplot"
+- Moved "Number at risk" label to the left
+- Moved number at risk section up one line to take up less space.
+- In DESCRIPTION, added link to the survplot web page.
+
+
+Changes in version 0.0.3 (2009-06-24)
+
+- Added "invert" function.
+- "plotsurv": Check length of 'snames'.
+- "plotsurv": Automatically trim redundant prefix of 'snames'.
+- "plotsurv": Add 'stitle' and 'lwd' arguments.
+
+
+Changes in version 0.0.2 (2009-04-29)
+
+- "nrisk" was crashing in R-2.9.0 because "survfit.object" changed. 
+- "plotsurv" was crashing in R-2.9.0 because "plot.survfit" can no longer make a legend.
+- Added "lty" and "legend.pos" arguments to "plotsurv".
+
+
+Changes in version 0.0.1 (2009-02-20)
+
+- First release.  The functions were all taken from the (not publicly available) "aronmisc" package.
+
