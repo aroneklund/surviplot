@@ -130,21 +130,35 @@ censor <- function(x, at) {
 }
 
 
-cutn <- function(x, n = 2, ...) {
-  stopifnot(n >= 1)
-  nUnique <- length(na.omit(unique(x)))
-  if(nUnique == 0) {
-    return(factor(rep(NA, length(x))))
-  } else {
-    if(nUnique == 1) {
-      breaks <- pretty(x)
+cutn <- function(x, n = 2, right = TRUE, ...) {
+    stopifnot(n >= 1)
+    xUnique <- sort(na.omit(unique(x)))
+    nUnique <- length(xUnique)
+    if(n > nUnique) n <- nUnique
+    if(nUnique == 0) {
+        return(factor(rep(NA, length(x))))
     } else {
-      breaks <-  quantile(x, probs = seq(0, 1, length = n + 1), na.rm = TRUE)
-    }  
-    return(cut(x, breaks = breaks, include.lowest = TRUE, ...))
-  }
+        if (nUnique == 1) {
+            breaks <- pretty(x)
+        } else if (nUnique == n) {
+            if(right) {
+                breaks <- c(pretty(extendrange(xUnique[1:2]))[1], xUnique)
+            } else {
+                breaks <- c(xUnique, tail(pretty(extendrange(tail(xUnique, n = 2))), n = 1))
+            }
+        } else {
+            breaks <- quantile(x, probs = seq(0, 1, length = n + 1), na.rm = TRUE)
+            ## try to fix some relatively common problems
+            if(breaks[1] == breaks[2] && n >= 2) { 
+                breaks[2] <- mean(c(breaks[2], min(x[x > breaks[2]], na.rm = TRUE)))
+            }
+            if (breaks[n] == breaks[n + 1] && n >= 2) { 
+                breaks[n] <- mean(c(breaks[n], max(x[x < breaks[n]], na.rm = TRUE)))
+            }
+        }  
+        return(cut(x, breaks = unique(breaks), include.lowest = TRUE, right = right, ...))
+    }
 }
-
 
 invert <- function(x) {
   stopifnot(class(x) == 'Surv')

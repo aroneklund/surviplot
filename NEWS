@@ -1,6 +1,11 @@
 surviplot NEWS
 
 
+Changes in version 1.1.0 (2017-04-05)
+
+- Modified "cutn" such that it doesn't choke on challenging data (or at least chokes less often).
+
+
 Changes in version 1.0.0 (2016-08-08)
 
 - This package was formerly called "survplot" (until version 0.0.7) and is now called "surviplot". This was done to avoid confusion with the function "survplot" in the "rms" package.

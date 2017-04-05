@@ -7,10 +7,14 @@ cutn(x, n = 2, ...)
 }
 \arguments{
   \item{x}{ A numeric vector. }
-  \item{n}{ Integer, the number of bins. }
+  \item{n}{ Integer, the (maximum) number of bins. The actual number of bins is limited by the number of unique values in x.}
   \item{\dots}{ Further arguments passed to \code{\link{cut}}; e.g. "labels". }
 }
-\details{ Missing values are silently ignored. }
+\details{ 
+Some effort is made to return sensible values, even with repeated values that make completely evenly-sized bins impossible.
+
+Missing values are silently ignored. 
+}
 \value{ A factor of the same length as \code{x}. }
 \seealso{ \code{\link{cut}} }
 \examples{ 
