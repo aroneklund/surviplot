@@ -16,8 +16,8 @@ History: surviplot vs. survplot
 -------------------------------
 
 I originally called this package "survplot" and made it available on my website
-around 2009.  Soon after, I discovered the existence of a function also called "survplot"
-in the ["rms" package](https://cran.r-project.org/package=rms) with
+around 2009.  Soon after, I discovered the existence of a function called "survplot"
+in the [rms package](https://cran.r-project.org/package=rms) with
 somewhat similar functionality.  I was heartbroken.  Worse, there seemed to be people
 out there who were getting the two packages confused. 
 
@@ -47,8 +47,8 @@ Installation
 
 You can install the latest version from GitHub like this:
 
-    ## install.packages(devtools)
-	library(devtools)
+    ## install.packages("devtools")
+	library("devtools")
 	install_github("aroneklund/surviplot")
 
 
@@ -56,9 +56,9 @@ Related works
 -------------
 
 There are other R packages with similar functionality:
-* ["rms"](https://cran.r-project.org/package=rms) also draws
+* [**rms**](https://cran.r-project.org/package=rms) also draws
 survival curves with number-at-risk.
-* ["survminer"](https://cran.r-project.org/package=survminer)
+* [**survminer**](https://cran.r-project.org/package=survminer)
 draws survival curves with number-at-risk in the ggplot2 framework.
 
 
