@@ -3,12 +3,13 @@
 \title{ Convert numeric to factor, using bins of equal cardinality }
 \description{ This is similar to cut, except that the breakpoints are chosen such that each bin contains roughly the same number of samples.}
 \usage{
-cutn(x, n = 2, ...)
+cutn(x, n = 2, right = TRUE, ...)
 }
 \arguments{
   \item{x}{ A numeric vector. }
   \item{n}{ Integer, the (maximum) number of bins. The actual number of bins is limited by the number of unique values in x.}
-  \item{\dots}{ Further arguments passed to \code{\link{cut}}; e.g. "labels". }
+  \item{right}{ see \code{\link{cut}} }
+  \item{\dots}{ Further arguments passed to \code{\link{cut}}; e.g. "labels", "include.lowest". }
 }
 \details{ 
 Some effort is made to return sensible values, even with repeated values that make completely evenly-sized bins impossible.

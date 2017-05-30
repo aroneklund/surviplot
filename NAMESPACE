@@ -4,5 +4,23 @@ exportPattern(".")
 # Import all packages listed as Imports or Depends
 import(survival)
 
-importFrom("graphics", "axTicks", "axis", "legend", "par", "plot")
-importFrom("stats", "na.omit", "quantile")
+importFrom("graphics", 
+    "axTicks", 
+    "axis", 
+    "legend", 
+    "par", 
+    "plot"
+)
+
+importFrom("grDevices", 
+    "extendrange"
+)
+
+importFrom("stats", 
+    "na.omit", 
+    "quantile"
+)
+
+importFrom("utils", 
+    "tail"
+)

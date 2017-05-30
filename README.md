@@ -22,7 +22,7 @@ somewhat similar functionality.  I was heartbroken.  Worse, there seemed to be p
 out there who were getting the two packages confused. 
 
 After seven years of anguish I finally arrived at a satisfactory new name for my
-package: **surviplot**.  
+package: **surviplot**.  Ta-dah!  Phew.
 
 Version 1.0.0 of surviplot is essentially the same as version 0.0.7 of
 survplot, except for the "survplot" -> "surviplot" thing.
@@ -48,8 +48,7 @@ Installation
 You can install the latest version from GitHub like this:
 
     ## install.packages("devtools")
-	library("devtools")
-	install_github("aroneklund/surviplot")
+	devtools::install_github("aroneklund/surviplot")
 
 
 Related works
